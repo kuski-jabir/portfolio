@@ -88,14 +88,12 @@
           <div class="mb-8">
             <h5 class="text-xl font-medium mb-4">My Skills</h5>
             <div class="flex flex-wrap gap-3 justify-center">
-              <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full">JavaScript</span>
-              <span class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full">React</span>
-              <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full">Node.js</span>
-              <span class="skill-pill bg-red-100 text-red-800 px-4 py-2 rounded-full">Express</span>
-              <span class="skill-pill bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">MongoDB</span>
-              <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Tailwind CSS</span>
-              <span class="skill-pill bg-pink-100 text-pink-800 px-4 py-2 rounded-full">C#</span>
-              <span class="skill-pill bg-gray-100 text-gray-800 px-4 py-2 rounded-full">TypeScript</span>
+              <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full border-b-4 border-blue-300 hover:translate-y-[-2px] transition-transform">JavaScript</span>              <span class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full">React</span>
+              <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full border-b-4 border-blue-300 hover:translate-y-[-2px] transition-transform">C#</span>
+              <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full border-b-4 border-blue-300 hover:translate-y-[-2px] transition-transform">React</span>
+              <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full border-b-4 border-blue-300 hover:translate-y-[-2px] transition-transform">Express</span>
+              <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full border-b-4 border-blue-300 hover:translate-y-[-2px] transition-transform">Tailwind CSS</span>
+              <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full border-b-4 border-blue-300 hover:translate-y-[-2px] transition-transform">MongoDB</span>
             </div>
           </div>
           <!-- <a href="#" class="inline-flex items-center text-blue-500 hover:text-blue-700 transition-colors duration-300">
@@ -190,88 +188,72 @@
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-white">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h3 class="text-4xl font-bold mb-4 text-center gradient-text">Get In Touch</h3>
-      <p class="text-lg text-gray-600 mb-12 text-center">
-        Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
-      </p>
-      <div class="bg-gray-50 rounded-2xl shadow-md p-8">
-        <form class="space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-              <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
-            </div>
-          </div>
-          <div>
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-            <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300">
-            Send Message <i class="fas fa-paper-plane ml-2"></i>
-          </button>
-        </form>
-        <div class="mt-8 pt-8 border-t border-gray-200">
-          <div class="flex flex-col md:flex-row justify-center gap-8">
-            <div class="flex items-center justify-center">
-              <div class="bg-blue-100 p-3 rounded-full mr-4">
-                <i class="fas fa-envelope text-blue-600"></i>
-              </div>
-              <div>
-                <h5 class="font-medium text-gray-500">Email</h5>
-                <a href="mailto:jane.doe@example.com" class="text-blue-500 hover:text-blue-700">kuskijabir2018@gmail.com</a>
-              </div>
-            </div>
-            <div class="flex items-center justify-center">
-              <!-- <div class="bg-purple-100 p-3 rounded-full mr-4">
-                <i class="fas fa-phone-alt text-purple-600"></i>
-              </div> -->
-              <!-- <div>
-                <h5 class="font-medium text-gray-500">Phone</h5>
-                <a href="tel:+1234567890" class="text-blue-500 hover:text-blue-700">+1 (234) 567-890</a>
-              </div> -->
-            </div>
-          </div>
-          <div class="flex justify-center space-x-6 mt-8">
-            <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors duration-300">
-              <i class="fab fa-github text-2xl"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-blue-400 transition-colors duration-300">
-              <i class="fab fa-twitter text-2xl"></i>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-blue-700 transition-colors duration-300">
-              <i class="fab fa-linkedin text-2xl"></i>
-            </a>
-            <!-- <a href="#" class="text-gray-500 hover:text-pink-600 transition-colors duration-300">
-              <i class="fab fa-dribbble text-2xl"></i>
-            </a> -->
-          </div>
+  <div class="container mx-auto px-6 max-w-4xl">
+    <h3 class="text-4xl font-bold mb-4 text-center gradient-text">Get In Touch</h3>
+    <form 
+      id="myForm"
+      action="https://formspree.io/f/YOUR_FORMSPREE_ID" 
+      method="POST"
+      class="bg-gray-50 rounded-2xl shadow-md p-8"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white text-gray-800"
+          >
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white text-gray-800"
+          >
         </div>
       </div>
-    </div>
-  </section>
+      <div class="mt-6">
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+        <textarea 
+          id="message" 
+          name="message"
+          rows="5" 
+          required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white text-gray-800"
+        ></textarea>
+      </div>
+      <button 
+        type="submit" 
+        id="submitBtn"
+        class="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300"
+      >
+        Send Message <i class="fas fa-paper-plane ml-2"></i>
+      </button>
+      <div id="formStatus" class="mt-4 text-center"></div>
+    </form>
+  </div>
+</section>
+
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
+  <footer class="bg-gray-50 text-gray-800 py-12">
     <div class="container mx-auto px-6">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-6 md:mb-0">
           <h2 class="text-2xl font-bold gradient-text">KuskiJabir.</h2>
-          <p class="mt-2 text-gray-400">Building digital experiences that matter.</p>
+          <p class="mt-2 text-gray-600">Building digital experiences that matter.</p>
         </div>
         <div class="flex space-x-6">
-          <a href="#hero" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
-          <a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a>
-          <a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-300">Projects</a>
-          <a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a>
+          <a href="#hero" class="text-blue-500 hover:text-white transition-colors duration-300">Home</a>
+          <a href="#about" class="text-blue-500 hover:text-white transition-colors duration-300">About</a>
+          <a href="#projects" class="text-blue-500 hover:text-white transition-colors duration-300">Projects</a>
+          <a href="#contact" class="text-blue-500 hover:text-white transition-colors duration-300">Contact</a>
         </div>
       </div>
       <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
@@ -279,6 +261,47 @@
       </div>
     </div>
   </footer>
+<script>
+  const form = document.getElementById('myForm');
+  const formStatus = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
 
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Change button text
+    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ml-2"></i>';
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        formStatus.innerHTML = '✅ Message sent successfully!';
+        formStatus.className = 'mt-4 text-center text-green-600 dark:text-green-400';
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      formStatus.innerHTML = '❌ Oops! There was a problem. Please try again.';
+      formStatus.className = 'mt-4 text-center text-red-600 dark:text-red-400';
+    } finally {
+      submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane ml-2"></i>';
+      submitBtn.disabled = false;
+      
+      // Hide status after 5 seconds
+      setTimeout(() => {
+        formStatus.innerHTML = '';
+      }, 5000);
+    }
+  });
+</script>
 </body>
 </html>
