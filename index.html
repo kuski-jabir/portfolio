@@ -11,6 +11,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
 
     
@@ -90,12 +91,8 @@
   <!-- Navbar -->
 <header class="fixed top-0 w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 dark:bg-gray-800/80 dark:shadow-gray-700">
   <nav class="container mx-auto flex justify-between items-center p-4 md:p-6">
-    <img src="assets/images/logo3.svg" width="60" height="60" class="rounded-lg" >
-    
-    <!-- Mobile menu button -->
-    <button id="mobileMenuButton" class="md:hidden p-2 focus:outline-none">
-      <i class="fas fa-bars text-gray-800 dark:text-gray-200 text-xl"></i>
-    </button>
+    <!-- Logo -->
+    <img src="assets/images/logo3.svg" width="60" height="60" class="rounded-lg">
     
     <!-- Desktop Navigation -->
     <ul class="hidden md:flex space-x-6 lg:space-x-8">
@@ -105,27 +102,28 @@
       <li><a href="#contact" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">Contact</a></li>
     </ul>
     
-    <!-- Dark mode toggle (moved inside nav) -->
-    <button id="themeToggle" class="hidden md:block p-2 rounded-full focus:outline-none ml-4">
-      <i id="sunIcon" class="fas fa-sun text-yellow-400 hidden"></i>
-      <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
-    </button>
+    <!-- Right-side elements (dark toggle + mobile menu) -->
+    <div class="flex items-center space-x-4">
+      <!-- Dark mode toggle (ALWAYS visible) -->
+      <button id="themeToggle" class="p-2 rounded-full focus:outline-none">
+        <i id="sunIcon" class="fas fa-sun text-yellow-400 hidden"></i>
+        <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
+      </button>
+      
+      <!-- Mobile menu button (hidden on desktop) -->
+      <button id="mobileMenuButton" class="md:hidden p-2 focus:outline-none">
+        <i class="fas fa-bars text-gray-800 dark:text-gray-200 text-xl"></i>
+      </button>
+    </div>
   </nav>
   
-  <!-- Mobile Menu -->
+  <!-- Mobile Menu (simplified) -->
   <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
     <div class="container mx-auto px-4 py-3 flex flex-col">
       <a href="#hero" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Home</a>
       <a href="#about" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">About</a>
       <a href="#projects" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Projects</a>
       <a href="#contact" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
-      <div class="flex items-center py-2">
-        <span class="mr-2">Theme:</span>
-        <button id="mobileThemeToggle" class="p-2 rounded-full focus:outline-none">
-          <i id="mobileSunIcon" class="fas fa-sun text-yellow-400 hidden"></i>
-          <i id="mobileMoonIcon" class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
-        </button>
-      </div>
     </div>
   </div>
 </header>
