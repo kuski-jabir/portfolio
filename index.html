@@ -11,141 +11,70 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-
-    
-    html {
-  scroll-behavior: smooth;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeIn {
-      animation: fadeIn 1s ease-out forwards;
-    }
-    .gradient-text {
-      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .project-card {
-    position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: float 6s ease-in-out infinite;
-}
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: -2px; left: -2px; right: -2px; bottom: -2px;
-  background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc);
-  background-size: 200% 200%;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease, background-position 2s ease;
-  border-radius: 14px;
-}
-.project-card:hover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.03);
-  animation: floatHover 2s ease-in-out infinite;
-}
-    .skill-pill {
-      transition: all 0.2s ease;
-    }
-    .skill-pill:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-
-.project-card:hover::before {
-  opacity: 1;
-  animation: gradientMove 3s ease infinite;
-}
-
-
-
-    @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes floatHover {
-  0%, 100% { transform: translateY(-5px); }
-  50% { transform: translateY(-15px); }
-}
-  </style>
+  <!-- Extracted CSS Files -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/components.css">
 </head>
 <body class="font-sans text-gray-800 bg-white antialiased dark:bg-gray-900 dark:text-gray-100">
   <!-- Navbar -->
-<header class="fixed top-0 w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 dark:bg-gray-800/80 dark:shadow-gray-700">
-  <nav class="container mx-auto flex justify-between items-center p-4 md:p-6">
-    <!-- Logo -->
-    <img src="assets/images/logo3.svg" width="60" height="60" class="rounded-lg">
-    
-    <!-- Desktop Navigation -->
-    <ul class="hidden md:flex space-x-6 lg:space-x-8">
-      <li><a href="#hero" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">Home</a></li>
-      <li><a href="#about" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">About</a></li>
-      <li><a href="#projects" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">Projects</a></li>
-      <li><a href="#contact" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">Contact</a></li>
-    </ul>
-    
-    <!-- Right-side elements (dark toggle + mobile menu) -->
-    <div class="flex items-center space-x-4">
-      <!-- Dark mode toggle (ALWAYS visible) -->
-      <button id="themeToggle" class="p-2 rounded-full focus:outline-none">
-        <i id="sunIcon" class="fas fa-sun text-yellow-400 hidden"></i>
-        <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
-      </button>
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 dark:bg-gray-800/80 dark:shadow-gray-700">
+    <nav class="container mx-auto flex justify-between items-center p-4 md:p-6">
+      <!-- Logo -->
+      <img src="assets/images/logo3.svg" width="60" height="60" class="rounded-lg">
       
-      <!-- Mobile menu button (hidden on desktop) -->
-      <button id="mobileMenuButton" class="md:hidden p-2 focus:outline-none">
-        <i class="fas fa-bars text-gray-800 dark:text-gray-200 text-xl"></i>
-      </button>
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex space-x-6 lg:space-x-8">
+        <li><a href="#hero" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-500 transition-colors duration-300 dark:hover:text-blue-400">Contact</a></li>
+      </ul>
+      
+      <!-- Right-side elements (dark toggle + mobile menu) -->
+      <div class="flex items-center space-x-4">
+        <!-- Dark mode toggle (ALWAYS visible) -->
+        <button id="themeToggle" class="p-2 rounded-full focus:outline-none">
+          <i id="sunIcon" class="fas fa-sun text-yellow-400 hidden"></i>
+          <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
+        </button>
+        
+        <!-- Mobile menu button (hidden on desktop) -->
+        <button id="mobileMenuButton" class="md:hidden p-2 focus:outline-none">
+          <i class="fas fa-bars text-gray-800 dark:text-gray-200 text-xl"></i>
+        </button>
+      </div>
+    </nav>
+    
+    <!-- Mobile Menu (simplified) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+      <div class="container mx-auto px-4 py-3 flex flex-col">
+        <a href="#hero" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Home</a>
+        <a href="#about" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">About</a>
+        <a href="#projects" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Projects</a>
+        <a href="#contact" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
+      </div>
     </div>
-  </nav>
-  
-  <!-- Mobile Menu (simplified) -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
-    <div class="container mx-auto px-4 py-3 flex flex-col">
-      <a href="#hero" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Home</a>
-      <a href="#about" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">About</a>
-      <a href="#projects" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Projects</a>
-      <a href="#contact" class="py-2 hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
-    </div>
-  </div>
-</header>
+  </header>
 
-<!---  Hero section  -->
-<section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 pt-16 md:pt-20 dark:from-gray-800 dark:to-gray-900">
-  <div class="text-center px-4 animate-fadeIn w-full max-w-4xl mx-4">
-    <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-200 to-purple-200 flex items-center justify-center overflow-hidden border-4 border-white shadow-lg">
-            <img src="assets/images/Workspace.jpg" alt="" class="h-full w-full object-cover rounded-lg" />
+  <!-- Hero section -->
+  <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 pt-16 md:pt-20 dark:from-gray-800 dark:to-gray-900">
+    <div class="text-center px-4 animate-fadeIn w-full max-w-4xl mx-4">
+      <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-200 to-purple-200 flex items-center justify-center overflow-hidden border-4 border-white shadow-lg">
+        <img src="assets/images/Workspace.jpg" alt="" class="h-full w-full object-cover rounded-lg" />
+      </div>
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Kuski Jabir</span></h2>
+      <p class="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 mx-auto max-w-2xl px-4">Full Stack Developer passionate about building beautiful, functional web applications</p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+        <a href="#projects" class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 md:px-8 md:py-3 rounded-full hover:shadow-lg transition-all duration-300 text-sm md:text-base">
+          View My Work <i class="fas fa-arrow-down ml-2"></i>
+        </a>
+        <a href="#contact" class="border-2 border-blue-500 text-blue-500 px-6 py-2 md:px-8 md:py-3 rounded-full hover:bg-blue-50 dark:hover:bg-gray-800 transition-all duration-300 text-sm md:text-base">
+          Contact Me
+        </a>
+      </div>
     </div>
-    <h2 class="text-3xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Kuski Jabir</span></h2>
-    <p class="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 mx-auto max-w-2xl px-4">Full Stack Developer passionate about building beautiful, functional web applications</p>
-    <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-      <a href="#projects" class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 md:px-8 md:py-3 rounded-full hover:shadow-lg transition-all duration-300 text-sm md:text-base">
-        View My Work <i class="fas fa-arrow-down ml-2"></i>
-      </a>
-      <a href="#contact" class="border-2 border-blue-500 text-blue-500 px-6 py-2 md:px-8 md:py-3 rounded-full hover:bg-blue-50 dark:hover:bg-gray-800 transition-all duration-300 text-sm md:text-base">
-        Contact Me
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="py-20 bg-white dark:bg-gray-900">
@@ -169,142 +98,138 @@
               <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full border-b-4 border-blue-300 hover:translate-y-[-2px] transition-transform">Tailwind CSS</span>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
-</section>
+  </section>
 
   <!-- Projects Section -->
   <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
     <div class="container mx-auto px-6">
-      <h3 class="text-4xl font-bold mb-4 text-center gradient-text dark:text-gray-300 ">My Projects</h3>
+      <h3 class="text-4xl font-bold mb-4 text-center gradient-text dark:text-gray-300">My Projects</h3>
       <p class="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto dark:text-gray-300">
         Here are some of my recent projects. Each one was built to solve specific problems and challenges.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-       
-
-<div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:shadow-gray-700 mx-2 sm:mx-0">   
-         <a href="https://omariano.com/" target="_blank" class="block">
-          <div class="bg-gradient-to-r from-blue-100 to-purple-100 h-48 rounded-lg mb-4 flex items-center justify-center">
-            <img src="assets/images/Omariano.PNG" alt="Omariano" class="h-full w-full object-cover rounded-lg" />
-          </div>
-          <h4 class="font-semibold text-xl mb-2">Omariano</h4>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">E-Commerce site specializing in Islamic  essentials.</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
-            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Node.js</span>
-            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">MongoDB</span>
-          </div>
-          
+        <!-- Project 1 -->
+        <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:shadow-gray-700 mx-2 sm:mx-0">   
+          <a href="https://omariano.com/" target="_blank" class="block">
+            <div class="bg-gradient-to-r from-blue-100 to-purple-100 h-48 rounded-lg mb-4 flex items-center justify-center">
+              <img src="assets/images/Omariano.PNG" alt="Omariano" class="h-full w-full object-cover rounded-lg" />
+            </div>
+            <h4 class="font-semibold text-xl mb-2">Omariano</h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">E-Commerce site specializing in Islamic essentials.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Node.js</span>
+              <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">MongoDB</span>
+            </div>
           </a>
         </div>
         
         <!-- Project 2 -->
-<div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:shadow-gray-700  mx-2 sm:mx-0"> 
-           <a href="https://sakina.ke/" target="_blank">
-          <div class="bg-gradient-to-r from-purple-100 to-pink-100 h-48 rounded-lg mb-4 flex items-center justify-center">
-            <img src="assets/images/Sakina.PNG" alt="Sakina Hotel" class="h-full w-full object-cover rounded-lg" />
-          </div>
-          <h4 class="font-semibold text-xl mb-2">Sakina Hotel</h4>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">A luxury hotel and restaurant boasting exceptional service.</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
-            <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Next.js</span>
-            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Stripe</span>
-          </div>
+        <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:shadow-gray-700 mx-2 sm:mx-0"> 
+          <a href="https://sakina.ke/" target="_blank">
+            <div class="bg-gradient-to-r from-purple-100 to-pink-100 h-48 rounded-lg mb-4 flex items-center justify-center">
+              <img src="assets/images/Sakina.PNG" alt="Sakina Hotel" class="h-full w-full object-cover rounded-lg" />
+            </div>
+            <h4 class="font-semibold text-xl mb-2">Sakina Hotel</h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A luxury hotel and restaurant boasting exceptional service.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
+              <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Next.js</span>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Stripe</span>
+            </div>
           </a>  
         </div>
         
         <!-- Project 3 -->
-<div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:shadow-gray-700 mx-2 sm:mx-0"> 
-           <a href="https://www.imaraluxuryhomesltd.com/" target="_blank" class="block">
-          <div class="bg-gradient-to-r from-green-100 to-blue-100 h-48 rounded-lg mb-4 flex items-center justify-center">
-            <img src="assets/images/Imara.PNG" alt="Imara Luxury Homes" class="h-full w-full object-cover rounded-lg" />
-          </div>
-          <h4 class="font-semibold text-xl mb-2">Imara Luxury Homes</h4>
-          <p class="text-gray-600  dark:text-gray-300 mb-4 ">Real estate agency dedicated to providing dream homes.</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Socket.io</span>
-            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Express</span>
-            <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">Redis</span>
-          </div>
+        <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:shadow-gray-700 mx-2 sm:mx-0"> 
+          <a href="https://www.imaraluxuryhomesltd.com/" target="_blank" class="block">
+            <div class="bg-gradient-to-r from-green-100 to-blue-100 h-48 rounded-lg mb-4 flex items-center justify-center">
+              <img src="assets/images/Imara.PNG" alt="Imara Luxury Homes" class="h-full w-full object-cover rounded-lg" />
+            </div>
+            <h4 class="font-semibold text-xl mb-2">Imara Luxury Homes</h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Real estate agency dedicated to providing dream homes.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Socket.io</span>
+              <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Express</span>
+              <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">Redis</span>
+            </div>
           </a>
         </div>
 
-<div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:shadow-gray-700 mx-2 sm:mx-0">
-            <a href="https://wajironeyouthassociation.org/" target="_blank" class="block">
-          <div class="bg-gradient-to-r from-purple-100 to-pink-100 h-48 rounded-lg mb-4 flex items-center justify-center">
-            <img src="assets/images/Wajir.PNG" alt="Wajir One Youth Association" class="h-full w-full object-cover rounded-lg" />
-          </div>
-          <h4 class="font-semibold text-xl mb-2">W.O.Y.A</h4>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Organization dedicated to empowering the youth of Wajir county.</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
-            <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Next.js</span>
-            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Stripe</span>
-          </div>
+        <!-- Project 4 -->
+        <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:shadow-gray-700 mx-2 sm:mx-0">
+          <a href="https://wajironeyouthassociation.org/" target="_blank" class="block">
+            <div class="bg-gradient-to-r from-purple-100 to-pink-100 h-48 rounded-lg mb-4 flex items-center justify-center">
+              <img src="assets/images/Wajir.PNG" alt="Wajir One Youth Association" class="h-full w-full object-cover rounded-lg" />
+            </div>
+            <h4 class="font-semibold text-xl mb-2">W.O.Y.A</h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Organization dedicated to empowering the youth of Wajir county.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
+              <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Next.js</span>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Stripe</span>
+            </div>
           </a>
         </div>
       </div>
-      
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-white dark:bg-gray-900">
-  <div class="container mx-auto px-6 max-w-4xl">
-    <h3 class="text-4xl font-bold mb-4 text-center gradient-text dark:text-gray-300">Get In Touch</h3>
-    <form 
-      id="myForm"
-      action="https://formspree.io/f/mpwdrgaa" 
-      method="POST"
-      class="bg-gray-50 rounded-2xl shadow-md p-6 md:p-8 dark:bg-gray-800 mx-2 sm:mx-0"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">Name</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name"
-            required
-            class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white text-gray-800"          >
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h3 class="text-4xl font-bold mb-4 text-center gradient-text dark:text-gray-300">Get In Touch</h3>
+      <form 
+        id="myForm"
+        action="https://formspree.io/f/mpwdrgaa" 
+        method="POST"
+        class="bg-gray-50 rounded-2xl shadow-md p-6 md:p-8 dark:bg-gray-800 mx-2 sm:mx-0"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name"
+              required
+              class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white text-gray-800">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white text-gray-800"
+            >
+          </div>
         </div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">Email</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email"
+        <div class="mt-6">
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">Message</label>
+          <textarea 
+            id="message" 
+            name="message"
+            rows="5" 
             required
             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white text-gray-800"
-          >
+          ></textarea>
         </div>
-      </div>
-      <div class="mt-6">
-        <label for="message" class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">Message</label>
-        <textarea 
-          id="message" 
-          name="message"
-          rows="5" 
-          required
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white text-gray-800"
-        ></textarea>
-      </div>
-      <button 
-        type="submit" 
-        id="submitBtn"
-        class="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300"
-      >
-        Send Message <i class="fas fa-paper-plane ml-2"></i>
-      </button>
-      <div id="formStatus" class="mt-4 text-center"></div>
-    </form>
-  </div>
-</section>
-
+        <button 
+          type="submit" 
+          id="submitBtn"
+          class="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300"
+        >
+          Send Message <i class="fas fa-paper-plane ml-2"></i>
+        </button>
+        <div id="formStatus" class="mt-4 text-center"></div>
+      </form>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-gray-50 text-gray-800 py-12 dark:bg-gray-900">
@@ -326,115 +251,18 @@
       </div>
     </div>
   </footer>
-<script>
-  const form = document.getElementById('myForm');
-  const formStatus = document.getElementById('formStatus');
-  const submitBtn = document.getElementById('submitBtn');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    // Change button text
-    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ml-2"></i>';
-    submitBtn.disabled = true;
+  <a href="https://wa.me/" 
+    target="_blank"
+    class="fixed bottom-20 right-4 md:bottom-8 md:right-8 w-12 h-12 md:w-14 md:h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 z-40"
+    aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp text-white text-xl md:text-2xl"></i>
+  </a>
 
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        formStatus.innerHTML = '✅ Message sent successfully!';
-        formStatus.className = 'mt-4 text-center text-green-600 dark:text-green-400';
-        form.reset();
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      formStatus.innerHTML = '❌ Oops! There was a problem. Please try again.';
-      formStatus.className = 'mt-4 text-center text-red-600 dark:text-red-400';
-    } finally {
-      submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane ml-2"></i>';
-      submitBtn.disabled = false;
-      
-      // Hide status after 5 seconds
-      setTimeout(() => {
-        formStatus.innerHTML = '';
-      }, 5000);
-    }
-  });
-</script>
-<script>
-  // Theme toggle functionality
-  const themeToggle = document.getElementById('themeToggle');
-  const sunIcon = document.getElementById('sunIcon');
-  const moonIcon = document.getElementById('moonIcon');
-  
-  // Check for saved theme preference or use OS preference
-  if (localStorage.getItem('theme') === 'dark' || 
-      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
-    sunIcon.classList.remove('hidden');
-    moonIcon.classList.add('hidden');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-  
-  // Toggle theme on button click
-  themeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    const isDark = document.documentElement.classList.contains('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    
-    // Toggle icon visibility
-    sunIcon.classList.toggle('hidden');
-    moonIcon.classList.toggle('hidden');
-  });
-</script>
-  
-<a href="https://wa.me/254703372908" 
-   target="_blank"
-   class="fixed bottom-20 right-4 md:bottom-8 md:right-8 w-12 h-12 md:w-14 md:h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 z-40"
-   aria-label="Chat on WhatsApp">
-  <i class="fab fa-whatsapp text-white text-xl md:text-2xl"></i>
-</a>
-
-<script>
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById('mobileMenuButton');
-  const mobileMenu = document.getElementById('mobileMenu');
-  
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-  
-  // Close mobile menu when clicking a link
-  document.querySelectorAll('#mobileMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-  });
-  
-  // Mobile theme toggle sync with desktop
-  const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-  const mobileSunIcon = document.getElementById('mobileSunIcon');
-  const mobileMoonIcon = document.getElementById('mobileMoonIcon');
-  
-  mobileThemeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    const isDark = document.documentElement.classList.contains('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    
-    // Sync all theme icons
-    sunIcon.classList.toggle('hidden');
-    moonIcon.classList.toggle('hidden');
-    mobileSunIcon.classList.toggle('hidden');
-    mobileMoonIcon.classList.toggle('hidden');
-  });
-</script>
+  <!-- External JS files -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/mobile-menu.js"></script>
+  <script src="assets/js/contact-form.js"></script>
 </body>
 </html>
